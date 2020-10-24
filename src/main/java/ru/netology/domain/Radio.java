@@ -19,7 +19,7 @@ public class Radio {
 
 
     public void setNumberOfCurrentRadioStation(int numberOfCurrentRadioStation) {
-       if (numberOfCurrentRadioStation > this.maxNumberOfRadioStation) {
+        if (numberOfCurrentRadioStation > this.maxNumberOfRadioStation) {
             return;
         }
         this.numberOfCurrentRadioStation = numberOfCurrentRadioStation;
@@ -28,13 +28,17 @@ public class Radio {
     public void nextNumberOfRadioStation() {
         if (this.numberOfCurrentRadioStation < this.maxNumberOfRadioStation) {
             this.numberOfCurrentRadioStation += 1;
-        } else this.numberOfCurrentRadioStation = 0;
+        } else {
+            this.numberOfCurrentRadioStation = 0;
+        }
     }
 
     public void prevNumberOfRadioStation() {
         if (this.numberOfCurrentRadioStation == 0) {
             this.numberOfCurrentRadioStation = this.maxNumberOfRadioStation;
-        } else this.numberOfCurrentRadioStation -= 1;
+        } else {
+            this.numberOfCurrentRadioStation -= 1;
+        }
     }
 
     public void setVolumeOfSound(int volumeOfSound) {
@@ -54,7 +58,7 @@ public class Radio {
     }
 
     public void decreaseVolumeOfSound() {
-        if (this.volumeOfSound >this.minVolumeOfSound) {
+        if (this.volumeOfSound > this.minVolumeOfSound) {
             this.volumeOfSound -= 1;
         }
     }
